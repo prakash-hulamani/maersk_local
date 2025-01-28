@@ -87,6 +87,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
+        platforms: linux/amd64,linux/arm64
         tags: demo.goharbor.io/harbor_flux/go-web-app:${{ github.run_id }} # Example: harbor.mycompany.com/my-project/go-web-app:${{ github.run_id }}
 
 
