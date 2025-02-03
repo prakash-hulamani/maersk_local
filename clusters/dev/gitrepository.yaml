@@ -7,7 +7,7 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/prakash-hulamani/maersk_local
+  url: https://github.com/prakash-hulamani/maersk_local.git
   secretRef:
     name: harbor-credentials
 
