@@ -9,7 +9,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: go-web-app
   targetNamespace: harbor
   images:
     - name: demo.goharbor.io/harbor_flux/go-web-app

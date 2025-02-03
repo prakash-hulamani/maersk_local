@@ -1,13 +1,13 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: flux-system
+  name: go-web-app
   namespace: flux-system
 spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/prakash-hulamani/maersk_local.git
+  url: https://github.com/prakash-hulamani/maersk_local
   secretRef:
-    name: harbor-credentials
+    name: flux-git-token
 
