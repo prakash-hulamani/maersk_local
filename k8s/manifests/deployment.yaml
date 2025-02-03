@@ -18,30 +18,9 @@ spec:
       containers:
       - name: go-web-app
         image: demo.goharbor.io/harbor_flux/go-web-app:13011749734
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
         ports:
         - containerPort: 8080
       imagePullSecrets:
         - name: harbor-credentials
-=======
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
-=======
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
->>>>>>> Stashed changes
-        volumeMounts:
-        - name: secret-volume
-          mountPath: /etc/secrets
-          readOnly: true
-      volumes:
-      - name: secret-volume
-        secret:
-          secretName: harbor-credentials
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+      imagePullPolicy: Always
+

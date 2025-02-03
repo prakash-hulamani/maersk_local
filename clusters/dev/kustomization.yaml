@@ -1,34 +1,7 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-#apiVersion: kustomize.toolkit.fluxcd.io/v1
-#kind: Kustomization
-#metadata:
-#  name: go-web-app
-#  namespace: flux-system
-#spec:
-#  interval: 1m0s
-#  path: "./k8s/manifests"
-#  prune: true
-#  sourceRef:
-#    kind: GitRepository
-#    name: flux-system
-#  targetNamespace: harbor
-
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: go-web-app
-=======
-=======
->>>>>>> Stashed changes
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: go-web-app 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   namespace: flux-system
 spec:
   interval: 1m0s
@@ -38,17 +11,10 @@ spec:
     kind: GitRepository
     name: flux-system
   targetNamespace: harbor
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   images:
-    - name: demo.goharbor.io/harbor_flux/go-web-app  # The image to watch
-      newTag: "{{ .ImageRef }}"  # Flux will update this image with the new tag
-  # Optional: Set an automation strategy for image updates
-  # This could be defined outside Kustomization, but it's a good example
-  # of what you would configure in an ImageUpdateAutomation resource.
-=======
-
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
+    - name: demo.goharbor.io/harbor_flux/go-web-app
+      newTag: "{{ .ImageRef }}"  # Placeholder for Flux to update image tag
+  resources:
+    - imagerepository.yaml
+    - imagepolicy.yaml
+    - imageupdateautomation.yaml
