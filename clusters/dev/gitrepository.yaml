@@ -8,4 +8,6 @@ spec:
   ref:
     branch: main
   url: https://github.com/prakash-hulamani/maersk_local
+  secretRef:
+    name: harbor-credentials
 
