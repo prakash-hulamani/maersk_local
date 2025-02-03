@@ -13,8 +13,4 @@ spec:
   targetNamespace: harbor
   images:
     - name: demo.goharbor.io/harbor_flux/go-web-app
-      newTag: "{{ .ImageRef }}"  # Placeholder for Flux to update image tag
-  resources:
-    - imagerepository.yaml
-    - imagepolicy.yaml
-    - imageupdateautomation.yaml
+      newTag: "{{ .ImageRef }}"  # Flux will update the image tag
