@@ -1,0 +1,10 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: go-web-app
+  namespace: flux-system
+spec:
+  image: demo.goharbor.io/harbor_flux/go-web-app
+  interval: 1m0s
+  secretRef:
+    name: harbor-credentials   # Use the existing secret

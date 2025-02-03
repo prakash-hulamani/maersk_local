@@ -1,0 +1,23 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageUpdateAutomation
+metadata:
+  name: go-web-app-automation
+  namespace: flux-system
+spec:
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: maersk-local  # Your existing GitRepository name
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        name: "Flux Bot"
+        email: "flux-bot@example.com"
+      messageTemplate: "Update image to {{ .ImageRef }}"
+
+  update:
+    strategy: Setters
+    path: ./clusters/dev  # Adjust to your repo folder where kustomization.yaml is stored
