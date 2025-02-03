@@ -16,11 +16,10 @@ spec:
         app: go-web-app
     spec:
       containers:
-      - name: go-web-app
-        image: demo.goharbor.io/harbor_flux/go-web-app:13011749734
-        ports:
-        - containerPort: 8080
+        - name: go-web-app
+          image: demo.goharbor.io/harbor_flux/go-web-app:13011749734
+          ports:
+            - containerPort: 8080
       imagePullSecrets:
         - name: harbor-credentials
       imagePullPolicy: Always
-
